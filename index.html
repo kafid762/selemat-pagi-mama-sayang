@@ -1,65 +1,60 @@
+
 <!DOCTYPE html>
 <html lang="id">
 <head>
   <meta charset="UTF-8">
-  <title>Selamat Pagi, Mama Sayang!</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Selamat Pagi Mama Sayang</title>
   <style>
     body {
-      margin: 0;
-      background: linear-gradient(to top, #ffd1dc, #f0f8ff);
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      height: 100vh;
-      overflow: hidden;
-    }
-    .container {
+      background: linear-gradient(to right, #f9c5d1, #fbd786);
+      font-family: 'Comic Sans MS', cursive, sans-serif;
       text-align: center;
-      max-width: 600px;
-      padding: 20px;
-      animation: fadeIn 2s ease-in-out;
+      padding: 50px;
+      overflow-x: hidden;
     }
     h1 {
-      font-size: 2.5em;
-      color: #d63384;
-      margin-bottom: 0.5em;
+      font-size: 3em;
+      animation: slideInDown 1.2s ease-out;
     }
     p {
-      font-size: 1.4em;
-      color: #333;
-      margin: 10px 0;
-      opacity: 0;
-      animation: fadeInUp 1s forwards;
+      font-size: 1.5em;
+      margin-top: 20px;
+      animation: fadeIn 2s ease-in-out;
     }
-    .heart {
-      font-size: 3em;
-      animation: pulse 1.2s infinite;
-      margin-top: 30px;
+    .emoji {
+      font-size: 4em;
+      display: inline-block;
+      animation: floatEmoji 3s ease-in-out infinite;
     }
-
-    @keyframes fadeInUp {
-      from { transform: translateY(20px); opacity: 0; }
-      to { transform: translateY(0); opacity: 1; }
+    @keyframes slideInDown {
+      from {transform: translateY(-100%); opacity: 0;}
+      to {transform: translateY(0); opacity: 1;}
     }
-
-    @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
-
-    @keyframes pulse {
-      0% { transform: scale(1); }
-      50% { transform: scale(1.2); }
-      100% { transform: scale(1); }
+    @keyframes fadeIn {
+      from {opacity: 0;}
+      to {opacity: 1;}
+    }
+    @keyframes floatEmoji {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-15px); }
+    }
+    .music {
+      display: none;
     }
   </style>
 </head>
 <body>
-  <div class="container">
-    <h1>🌞 Selamat Pagi, Mama Sayang!</h1>
-    <p style="animation-delay: 1s;">Semangat kerja ya hari ini~ ☕💼</p>
-    <p style="animation-delay: 2.5s;">Hari gajian udah dekat 💸💖</p>
-    <p style="animation-delay: 4s;">Jangan lupa senyum biar rezekinya nambah 😘</p>
-    <p style="animation-delay: 5.5s;">Aku bangga & sayang kamu selalu! 💕</p>
-    <div class="heart">❤️</div>
-  </div>
+  <h1>🌞 Selamat Pagi, Mama Sayang!</h1>
+  <div class="emoji">💖</div>
+  <p>Semoga harimu cerah seperti senyummu hari ini.</p>
+  <p>Selamat gajian juga ya, semoga rezekimu lancar dan selalu berkah 😘</p>
+  <p>Ingat, kamu selalu punya seseorang yang bangga dan sayang sama kamu... yaitu aku 🥹❤️</p>
+  <div class="emoji">🐰✨</div>
+
+  <audio autoplay loop class="music">
+    <source src="https://cdn.pixabay.com/audio/2023/03/30/audio_335f5e7e5b.mp3" type="audio/mpeg">
+    Your browser does not support the audio element.
+  </audio>
 </body>
 </html>
